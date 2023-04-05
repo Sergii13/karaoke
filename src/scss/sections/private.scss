@@ -1,0 +1,144 @@
+.private {
+  padding: 66px 0 90px;
+  @media (max-width: $pc) {
+    padding: 55px 0 70px;
+  }
+
+  &__container {
+  }
+
+  &__title {
+    font-size: 50px;
+    line-height: math.div(60, 50);
+    text-transform: uppercase;
+    font-weight: 800;
+    @media (max-width: $pc) {
+      font-size: 36px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(105);
+      @media (max-width: $pc) {
+        margin-bottom: 75px;
+      }
+
+      @media (max-width: $mobile) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__items {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+      @media (max-width: $pc) {
+        margin-bottom: 55px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 70px;
+      }
+
+    }
+  }
+}
+
+.item-private {
+  display: flex;
+  align-items: flex-start;
+  gap: 65px;
+  @media (max-width: $pc) {
+    gap: 20px;
+
+  }
+  @media (max-width: em(650)) {
+    flex-direction: column;
+
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    @media (max-width: em(650)) {
+      flex-direction: column;
+    }
+
+    .item-private__content {
+      max-width: 100%;
+    }
+  }
+
+  &__image-ibg {
+    flex-shrink: 0;
+    width: percent(605, 1590);
+    padding-bottom: percent(432, 1590);
+    @media (max-width: em(1200)) {
+      padding-bottom: percent(366, 966);
+      width: percent(474, 966);
+    }
+    @media (max-width: em(650)) {
+      width: 100%;
+      padding-bottom: percent(290, 343);
+
+    }
+  }
+
+  &__content {
+    padding-top: 40px;
+    max-width: 625px;
+    @media (max-width: em(1200)) {
+      padding-top: 0;
+    }
+
+    h4 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: math.div(35, 30);
+      text-transform: uppercase;
+      @media (max-width: $mobile) {
+        font-size: 24px;
+        text-transform: inherit;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(50);
+        @media (max-width: $pc) {
+          margin-bottom: 40px;
+        }
+        @media (max-width: $tablet) {
+          margin-bottom: 25px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: math.div(36, 18);
+
+      &:not(:last-child) {
+        margin-bottom: rem(70);
+        @media (max-width: $pc) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 5px 20px;
+    max-width: 235px;
+    @media (max-width: em(650)) {
+      margin: 0 auto;
+      display: flex;
+    }
+  }
+}
+

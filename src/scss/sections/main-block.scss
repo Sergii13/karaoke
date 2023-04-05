@@ -1,0 +1,212 @@
+.main-block {
+  position: relative;
+  padding: 179px 0 83px;
+
+  @include adaptiveValue("padding-top", 179, 77, 0, 1920, 1024);
+  @media (max-width: $pc) {
+    padding-bottom: 118px;
+    padding-top: 77px;
+  }
+  @media (max-width: $mobile) {
+    padding: 120px 0 140px;
+  }
+
+  &::after {
+    content: '';
+    height: 373px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(360deg, #1C0B3F 0%, rgba(28, 11, 63, 0.0001) 100%);
+    @media (max-width: $mobile) {
+      height: 114px;
+    }
+  }
+
+  &__video-ibg {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    video,
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 50%;
+      object-fit: cover;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 120%;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: #1C0B3F;
+      opacity: 0.7;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    gap: 7px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    bottom: 75px;
+    right: 65px;
+    @media (hover: hover) {
+      &:hover {
+        color: $rose;
+
+        svg {
+          fill: $rose;
+        }
+      }
+    }
+
+    svg {
+      fill: #fff;
+      transform: rotate(90deg);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    }
+
+    @media (max-width: em(1200)) {
+      display: none;
+
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__subtitle {
+    font-size: 56px;
+    line-height: math.div(81, 56);
+    font-weight: 300;
+    @media (max-width: $pc) {
+      font-size: 30px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 25px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 120px;
+    max-width: 700px;
+    @include adaptiveValue("font-size", 120, 90, 0, 1920, 1024);
+    @media (max-width: $mobile) {
+      font-size: 50px;
+      line-height: math.div(56, 50);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+      @media (max-width: $pc) {
+        margin-bottom: 36px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 18px;
+      }
+
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 25px;
+    line-height: math.div(33, 25);
+    text-transform: uppercase;
+    color: #CAFD35;
+    @media (max-width: $pc) {
+      gap: 30px;
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(140);
+      @media (max-width: $pc) {
+        margin-bottom: 100px;
+      }
+      @media (max-width: em(1200)) {
+        margin-bottom: 83px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 65px;
+      }
+
+    }
+
+    img {
+      width: 55px;
+      @media (max-width: $pc) {
+        width: 40px;
+      }
+      @media (max-width: $mobile) {
+        width: 30px;
+      }
+    }
+  }
+
+  &__button {
+    height: 80px;
+    letter-spacing: 1.71111px;
+    color: #1C0A3B;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 10px 43px;
+    @media (max-width: $pc) {
+      height: 70px;
+      font-size: 20px;
+      padding: 5px 33px;
+    }
+    @media (max-width: $mobile) {
+      height: 60px;
+      padding: 5px 26px;
+      font-size: 16px;
+    }
+
+  }
+}
+
+.fullscreen-bg {
+  &__video {
+  }
+}
+
+.button {
+}
