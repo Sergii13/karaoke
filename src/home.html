@@ -26,21 +26,23 @@
                     </svg>
                 </a>
                 <div class="main-block__container">
-                    <div class="main-block__subtitle">
-                        Blue Bird
-                    </div>
-                    <h1 class="main-block__title">
-                        KARAOKE <br>
-                        ROOMS
-                    </h1>
-                    <div class="main-block__text">
-                        <img src="@img/svg/karaoke.svg" alt="">
-                        Sing and dance <br>
-                        No one is watching you
-                    </div>
-                    <a href="" class="button main-block__button">
-                        Book now
-                    </a>
+                    <div class="main-block__content">
+                        <div class="main-block__subtitle">
+                            Blue Bird
+                        </div>
+                        <h1 class="main-block__title">
+                            KARAOKE <br>
+                            ROOMS
+                        </h1>
+                        <div class="main-block__text">
+                            <img src="@img/svg/karaoke.svg" alt="">
+                            Sing and dance <br>
+                            No one is watching you
+                        </div>
+                        <a href="" class="button main-block__button">
+                            Book now
+                        </a></div>
+
                 </div>
             </section>
             <section class="private">
@@ -161,15 +163,18 @@
                                 <div class="item-form__label">
                                     Start Date
                                 </div>
-                                <div class="item-form__date">
-                                    <div class="item-form__day">
-                                        15
-                                    </div>
-                                    <div class="item-form__month">
-                                        oct
-                                    </div>
-                                    <img src="@img/icons/calendar.svg" alt="">
-                                </div>
+                                <label class="datepicker">
+                                    <input class="datepicker__input" type="text" data-datepicker>
+                                    <span class="datepicker__date">
+                                        <span data-datepicker-day class="datepicker__day">
+                                            15
+                                        </span>
+                                        <span data-datepicker-month class="datepicker__month">
+                                            oct
+                                        </span>
+                                        <img src="@img/icons/calendar.svg" alt="">
+                                    </span>
+                                </label>
                             </div>
                             <div class="form-book__item item-form">
                                 <div class="item-form__label">

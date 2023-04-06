@@ -5,22 +5,52 @@
 import { flsModules } from "../modules.js";
 
 // Підключення модуля
-import datepicker from 'js-datepicker';
+import datepicker from "js-datepicker";
 
-if (document.querySelector('[data-datepicker]')) {
-	const picker = datepicker('[data-datepicker]', {
-		customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
-		customMonths: ["Січ", "Лют", "Берез", "Квіт", "Трав", "Черв", "Лип", "Серп", "Верес", "Жовт", "Листоп", "Груд"],
-		overlayButton: 'Застосувати',
-		overlayPlaceholder: 'Рік (4 цифри)',
-		startDay: 1,
-		formatter: (input, date, instance) => {
-			const value = date.toLocaleDateString()
-			input.value = value
-		},
-		onSelect: function (input, instance, date) {
-
-		}
-	});
-	flsModules.datepicker = picker;
+const allDate = document.querySelectorAll("[data-datepicker]");
+const customMonth = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+if (allDate.length > 0) {
+  allDate.forEach((item) => {
+    let value = null;
+    const picker = datepicker(item, {
+      customMonths: customMonth,
+      startDay: 1,
+      disabler: (date) => {
+        return (
+          date.getDay() === 2 || date.getDay() === 1 || date.getDay() === 3
+        );
+      },
+      position: "tl",
+      autoClose: true,
+      minDate: new Date(),
+      dateSelected: null,
+      formatter: (input, date, instance) => {
+        value = date.toLocaleDateString();
+        input.value = value;
+        const monthIndex = date.getMonth();
+        const arrDate = value.split(".");
+        const parent = item.closest(".datepicker");
+        const day = parent.querySelector("[data-datepicker-day]");
+        const monthWrap = parent.querySelector("[data-datepicker-month]");
+        monthWrap.textContent = customMonth[monthIndex];
+        day.textContent = arrDate[0];
+        console.log(picker);
+        picker.hide();
+      },
+    });
+    flsModules.datepicker = picker;
+  });
 }
