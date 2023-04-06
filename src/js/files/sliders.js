@@ -10,7 +10,7 @@
 import Swiper, { Navigation } from "swiper";
 /*
 Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Детальніше дивись https://swiperjs.com/
 */
@@ -49,29 +49,29 @@ function initSliders() {
       //lazy: true,
 
       /*
-                                                                                                      // Ефекти
-                                                                                                      effect: 'fade',
-                                                                                                      autoplay: {
-                                                                                                          delay: 3000,
-                                                                                                          disableOnInteraction: false,
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        // Ефекти
+                                                                                                                                                                                                                        effect: 'fade',
+                                                                                                                                                                                                                        autoplay: {
+                                                                                                                                                                                                                            delay: 3000,
+                                                                                                                                                                                                                            disableOnInteraction: false,
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
 
       // Пагінація
       /*
-                                                                                                      pagination: {
-                                                                                                          el: '.swiper-pagination',
-                                                                                                          clickable: true,
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        pagination: {
+                                                                                                                                                                                                                            el: '.swiper-pagination',
+                                                                                                                                                                                                                            clickable: true,
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
 
       // Скроллбар
       /*
-                                                                                                      scrollbar: {
-                                                                                                          el: '.swiper-scrollbar',
-                                                                                                          draggable: true,
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        scrollbar: {
+                                                                                                                                                                                                                            el: '.swiper-scrollbar',
+                                                                                                                                                                                                                            draggable: true,
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
 
       // Кнопки "вліво/вправо"
       navigation: {
@@ -79,27 +79,27 @@ function initSliders() {
         nextEl: ".swiper-button-next",
       },
       /*
-                                                                                                      // Брейкпоінти
-                                                                                                      breakpoints: {
-                                                                                                          640: {
-                                                                                                              slidesPerView: 1,
-                                                                                                              spaceBetween: 0,
-                                                                                                              autoHeight: true,
-                                                                                                          },
-                                                                                                          768: {
-                                                                                                              slidesPerView: 2,
-                                                                                                              spaceBetween: 20,
-                                                                                                          },
-                                                                                                          992: {
-                                                                                                              slidesPerView: 3,
-                                                                                                              spaceBetween: 20,
-                                                                                                          },
-                                                                                                          1268: {
-                                                                                                              slidesPerView: 4,
-                                                                                                              spaceBetween: 30,
-                                                                                                          },
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        // Брейкпоінти
+                                                                                                                                                                                                                        breakpoints: {
+                                                                                                                                                                                                                            640: {
+                                                                                                                                                                                                                                slidesPerView: 1,
+                                                                                                                                                                                                                                spaceBetween: 0,
+                                                                                                                                                                                                                                autoHeight: true,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            768: {
+                                                                                                                                                                                                                                slidesPerView: 2,
+                                                                                                                                                                                                                                spaceBetween: 20,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            992: {
+                                                                                                                                                                                                                                slidesPerView: 3,
+                                                                                                                                                                                                                                spaceBetween: 20,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            1268: {
+                                                                                                                                                                                                                                slidesPerView: 4,
+                                                                                                                                                                                                                                spaceBetween: 30,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
       // Події
       on: {},
     });
@@ -128,29 +128,29 @@ function initSliders() {
       //lazy: true,
 
       /*
-                                                                                                      // Ефекти
-                                                                                                      effect: 'fade',
-                                                                                                      autoplay: {
-                                                                                                          delay: 3000,
-                                                                                                          disableOnInteraction: false,
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        // Ефекти
+                                                                                                                                                                                                                        effect: 'fade',
+                                                                                                                                                                                                                        autoplay: {
+                                                                                                                                                                                                                            delay: 3000,
+                                                                                                                                                                                                                            disableOnInteraction: false,
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
 
       // Пагінація
       /*
-                                                                                                      pagination: {
-                                                                                                          el: '.swiper-pagination',
-                                                                                                          clickable: true,
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        pagination: {
+                                                                                                                                                                                                                            el: '.swiper-pagination',
+                                                                                                                                                                                                                            clickable: true,
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
 
       // Скроллбар
       /*
-                                                                                                      scrollbar: {
-                                                                                                          el: '.swiper-scrollbar',
-                                                                                                          draggable: true,
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        scrollbar: {
+                                                                                                                                                                                                                            el: '.swiper-scrollbar',
+                                                                                                                                                                                                                            draggable: true,
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
 
       // Кнопки "вліво/вправо"
       navigation: {
@@ -158,27 +158,27 @@ function initSliders() {
         nextEl: ".us__arrow.next",
       },
       /*
-                                                                                                      // Брейкпоінти
-                                                                                                      breakpoints: {
-                                                                                                          640: {
-                                                                                                              slidesPerView: 1,
-                                                                                                              spaceBetween: 0,
-                                                                                                              autoHeight: true,
-                                                                                                          },
-                                                                                                          768: {
-                                                                                                              slidesPerView: 2,
-                                                                                                              spaceBetween: 20,
-                                                                                                          },
-                                                                                                          992: {
-                                                                                                              slidesPerView: 3,
-                                                                                                              spaceBetween: 20,
-                                                                                                          },
-                                                                                                          1268: {
-                                                                                                              slidesPerView: 4,
-                                                                                                              spaceBetween: 30,
-                                                                                                          },
-                                                                                                      },
-                                                                                                      */
+                                                                                                                                                                                                                        // Брейкпоінти
+                                                                                                                                                                                                                        breakpoints: {
+                                                                                                                                                                                                                            640: {
+                                                                                                                                                                                                                                slidesPerView: 1,
+                                                                                                                                                                                                                                spaceBetween: 0,
+                                                                                                                                                                                                                                autoHeight: true,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            768: {
+                                                                                                                                                                                                                                slidesPerView: 2,
+                                                                                                                                                                                                                                spaceBetween: 20,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            992: {
+                                                                                                                                                                                                                                slidesPerView: 3,
+                                                                                                                                                                                                                                spaceBetween: 20,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            1268: {
+                                                                                                                                                                                                                                slidesPerView: 4,
+                                                                                                                                                                                                                                spaceBetween: 30,
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        */
       // Події
       on: {},
     });
@@ -221,3 +221,34 @@ window.addEventListener("load", function (e) {
   // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
   //initSlidersScroll();
 });
+var init = false;
+
+function swiperRoom() {
+  if (window.innerWidth <= 991) {
+    if (!init) {
+      init = true;
+      if (document.querySelector(".room__slider"))
+        new Swiper(".room__slider", {
+          modules: [Navigation],
+          observer: true,
+          observeParents: true,
+          slidesPerView: 2,
+          speed: 800,
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+            },
+            700: {
+              slidesPerView: 2,
+            },
+          },
+        });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
+
+swiperRoom();
+window.addEventListener("resize", swiperRoom);

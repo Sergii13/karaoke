@@ -1,0 +1,355 @@
+.room {
+  padding: 118px 0 80px;
+  position: relative;
+  @media (max-width: em(1200)) {
+    padding: 70px 0 60px;
+  }
+  @media (max-width: $mobile) {
+    padding: 65px 0;
+  }
+
+  &__decor {
+    position: absolute;
+    font-size: 250px;
+    text-transform: uppercase;
+    color: #471B78;
+    font-weight: 800;
+    left: 160px;
+    top: 80px;
+    white-space: nowrap;
+    @media (max-width: $pc) {
+      font-size: 150px;
+      top: 50px;
+      left: -300px;
+    }
+    @media (max-width: $mobile) {
+      left: -50px;
+      top: 30px;
+    }
+
+  }
+
+  &__container {
+    z-index: 2;
+    max-width: 1770px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: math.div(60, 46);
+    font-weight: 800;
+    color: #CAFD35;
+    text-align: center;
+    @media (max-width: $pc) {
+      font-size: 36px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(162);
+      @media (max-width: $pc) {
+        margin-bottom: 100px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 85px;
+      }
+
+    }
+  }
+
+  &__slider {
+  }
+
+  .swiper-wrapper {
+    flex-wrap: nowrap;
+    @media (max-width: $mobile) {
+
+    }
+  }
+
+  &__left {
+  }
+}
+
+.room-card {
+
+  &.swiper-slide {
+    @media (min-width: $tablet) {
+      flex-shrink: 1;
+      width: 20%;
+    }
+    height: 800px;
+    transition: width 1s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: em(1750)) {
+      height: 570px;
+    }
+    @media (max-width: $tablet) {
+      height: 630px;
+    }
+    @media (max-width: em(700)) {
+      //width: 300px;
+
+    }
+    @media (min-width: $tablet) {
+      &:hover {
+        width: 66%;
+        flex-shrink: 0;
+
+        .room-card__image-ibg::after {
+          background: linear-gradient(90deg, rgba(60, 26, 115, 0.0001) 0%, #1C0B3F 100%);
+          opacity: 0.9;
+        }
+
+        .room-card__main {
+          animation: content forwards 1s 1s ease-in-out;
+        }
+
+        .room-card__rotate {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__image-ibg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: '';
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background: #1C0B3F;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 20px;
+
+  }
+
+  &__rotate {
+    position: absolute;
+    bottom: 20px;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    font-size: 100px;
+    line-height: math.div(117, 100);
+    font-weight: 800;
+    @media (max-width: em(1750)) {
+      font-size: 80px;
+      gap: 26px;
+    }
+    @media (max-width: em(1200)) {
+      font-size: 60px;
+      line-height: 0.8;
+
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    span {
+      font-size: 30px;
+      line-height: 35px;
+      @media (max-width: em(1750)) {
+        font-size: 25px;
+        line-height: 24px;
+
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 954px;
+    margin: 0 auto;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+    @media (max-width: $tablet) {
+      visibility: visible;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  &__right {
+  }
+}
+
+.room-left {
+  flex: 1 1 auto;
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 800;
+
+    span {
+      font-size: 30px;
+      line-height: 35px;
+      transform: translateY(-10px);
+      @media (max-width: em(1750)) {
+        font-size: 24px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(77);
+    }
+
+    h2 {
+      font-size: 100px;
+      line-height: math.div(117, 100);
+      @media (max-width: em(1750)) {
+        font-size: 60px;
+
+      }
+      @media (max-width: $tablet) {
+        font-size: 50px;
+      }
+
+
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media (max-width: em(1300)) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 30px;
+    @media (max-width: em(1300)) {
+      max-width: 300px;
+    }
+
+    &:last-child {
+      display: none;
+      @media (max-width: $tablet) {
+        display: inline-flex;
+      }
+    }
+
+    &:nth-child(1) {
+      color: #1C0A3B;
+    }
+  }
+}
+
+
+.right-room {
+  max-width: 333px;
+  flex-shrink: 0;
+  @media (max-width: em(1300)) {
+    max-width: 270px;
+  }
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: math.div(35, 30);
+    font-weight: 800;
+    color: #CAFD35;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: em(1750)) {
+      font-size: 24px;
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(62);
+      @media (max-width: em(1750)) {
+        margin-bottom: 25px;
+
+      }
+    }
+  }
+
+  ul {
+    &:not(:last-child) {
+      margin-bottom: rem(70);
+      @media (max-width: em(1750)) {
+        margin-bottom: 30px;
+
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      line-height: 23px;
+      gap: 36px;
+      @media (max-width: em(1750)) {
+        font-size: 18px;
+        gap: 20px;
+
+      }
+
+
+      img {
+        flex-shrink: 0;
+        max-width: 26px
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(26);
+      }
+    }
+  }
+
+  &__button {
+  }
+}
+
+@keyframes content {
+  0% {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

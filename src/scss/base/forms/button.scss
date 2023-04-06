@@ -25,6 +25,18 @@
     }
   }
 
+  &_border {
+    border: 2px solid #CAFD35;
+    color: #CAFD35;
+    background: transparent;
+    @media (hover: hover) {
+      &:hover {
+        color: $violet;
+        background: $green;
+      }
+    }
+  }
+
   &._fw {
     width: 100%;
   }
