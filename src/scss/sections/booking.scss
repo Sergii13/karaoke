@@ -1,0 +1,702 @@
+.booking {
+  padding: 79px 0 65px;
+  position: relative;
+  @media (max-width: $mobile) {
+    padding: 42px 0 64px;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 887px;
+    opacity: 0.1;
+    background: url('@img/booking/01.jpg') 0 0 /cover no-repeat, linear-gradient(360deg, #1C0B3F 0%, rgba(28, 11, 63, 0) 50.06%);
+    @media (max-width: $pc) {
+      height: 720px;
+    }
+
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 96px;
+    line-height: math.div(120, 96);
+    @media (max-width: $pc) {
+      font-size: 70px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 36px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__filter {
+  }
+
+  .datepicker {
+    &__input {
+    }
+
+    &__date {
+
+    }
+
+    &__day {
+      font-size: 40px;
+      margin-right: 5px;
+      margin-bottom: -7px;
+
+    }
+
+    img {
+      width: 32px;
+      margin-left: 30px;
+      margin-bottom: -3px;
+    }
+
+    &__month {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .quantity {
+    align-items: center;
+
+    &__button {
+      background: #401B8D;
+      margin-top: 0;
+
+      @media (hover: hover) {
+        &:hover {
+          background: $green;
+        }
+      }
+
+      &_minus {
+      }
+
+      &_plus {
+      }
+    }
+
+    &__input {
+      min-width: 70px;
+
+      input {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.filter-booking {
+  background: #15082F;
+  box-shadow: 8px 8px 60px rgba(28, 10, 59, 0.55);
+  border-radius: 16px;
+  padding: 28px 46px 36px 28px;
+  @media (max-width: $pc) {
+    padding: 20px;
+  }
+  @media (max-width: $mobile) {
+    padding: 16px 16px 32px;
+  }
+
+  &__title {
+    font-size: 24px;
+    @media (max-width: em(1200)) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+      @media (max-width: $mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__form {
+  }
+}
+
+.form-booking {
+  &__row {
+    display: flex;
+    align-items: center;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    max-width: 350px;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    @media (max-width: $pc) {
+      max-width: 25%;
+      padding: 15px 10px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 190px;
+      padding: 24px 10px;
+    }
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, #4E4165 0%, rgba(78, 65, 101, 0) 100%);
+        right: 0;
+        top: 0;
+        position: absolute;
+        @media (max-width: $mobile) {
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          top: auto;
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: math.div(16, 14);
+    text-transform: uppercase;
+    opacity: 0.52;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+      @media (max-width: $mobile) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__button-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 20px;
+    @media (max-width: $mobile) {
+      margin-top: 24px;
+      padding: 0 15px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    background: #CAFD35;
+    border-radius: 12px;
+    height: 130px;
+    display: inline-flex;
+    width: 100%;
+    max-width: 283px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1C0A3B;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $pc) {
+      height: 100px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 24px;
+      padding: 0 15px;
+      width: 100%;
+      max-width: 330px;
+      height: 55px;
+      font-size: 18px;
+
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: $rose;
+      }
+    }
+  }
+}
+
+.booking {
+  &__items {
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-top: 44px;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      line-height: math.div(20, 16);
+      margin-top: 22px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+      @media (max-width: $tablet) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+      position: relative;
+      @media (max-width: $mobile) {
+        margin-bottom: 33px;
+      }
+
+      &::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: #3A2658;
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        @media (max-width: $mobile) {
+          bottom: -16px;
+        }
+      }
+    }
+  }
+}
+
+.item-booking {
+  background: #15082F;
+  border-radius: 24px;
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: auto percent(754, 1621);
+  max-width: 100%;
+  @media (max-width: $pc) {
+    grid-template-columns: auto percent(654, 1621);
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 18px 16px;
+    border-radius: 16px;
+    gap: 18px;
+  }
+
+  &__top {
+    grid-column: 1/3;
+    min-width: 0;
+    @media (max-width: 1200px) {
+      grid-column: 1/2;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-weight: 500;
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+        margin-bottom: 18px;
+      }
+    }
+
+    img {
+      margin-right: 8px;
+      width: 24px;
+      @media (max-width: $mobile) {
+        width: 16px;
+      }
+    }
+  }
+
+  &__slider {
+
+  }
+
+  &__slider-wrap {
+    padding: 0 64px;
+    position: relative;
+    @media (max-width: $mobile) {
+      padding: 0 25px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__arrow {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 37px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $mobile) {
+      width: 22px;
+      height: 22px;
+      img {
+        width: 4px;
+      }
+    }
+
+    &.next {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &__time {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 3px 10px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    gap: 10px;
+    @media (max-width: $pc) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      height: 32px;
+      font-size: 14px;
+      gap: 3px;
+      border-radius: 8px;
+    }
+
+    &.active {
+      background: #401B8D;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: #401B8D;
+      }
+    }
+
+    &.checked {
+      &::after {
+        content: '';
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('@img/icons/check.svg') center /contain no-repeat;
+        @media (max-width: $mobile) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  &__main {
+
+  }
+
+  &__info {
+  }
+
+  &__grid-layout {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    @media (max-width: em(1200)) {
+      gap: 9px;
+
+    }
+  }
+
+  &__time-wrap {
+    background: #401B8D;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 43px 10px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: em(1200)) {
+      padding: 17px 0 13px;
+
+    }
+    @media (hover: hover) {
+      &:hover {
+        background: #6133BF;
+      }
+    }
+
+    &.booked {
+      color: rgba(255, 255, 255, 0.6);
+      background: #221738;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: 1.71111px;
+      text-transform: uppercase;
+      @media (max-width: $pc) {
+        font-size: 20px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 16px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+        @media (max-width: em(1200)) {
+          margin-bottom: 11px;
+
+        }
+      }
+    }
+  }
+
+  &__time-btn {
+    height: 56px;
+    max-width: 168px;
+    font-size: 20px;
+    color: #000000;
+    @media (max-width: $mobile) {
+      height: 25px;
+      max-width: 93px;
+      font-size: 13px;
+    }
+  }
+
+  &__booked {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: 1.71111px;
+    text-transform: uppercase;
+    @media (max-width: $pc) {
+      font-size: 24px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 13px;
+      line-height: 106.7%;
+    }
+  }
+}
+
+
+.info-booking {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
+  @media (max-width: 1200px) {
+    height: 319px;
+    order: -1;
+  }
+
+  &__image-ibg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(360deg, #2A1751 0%, rgba(36, 21, 66, 0) 88.89%);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 34px 24px 24px;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: $pc) {
+      padding: 10px 12px 16px 12px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 19px;
+    }
+  }
+
+  &__left {
+    display: flex;
+
+  }
+
+  &__name {
+    padding-right: 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    @media (max-width: $pc) {
+      padding-right: 12px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 1.71111px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      @media (max-width: $pc) {
+        font-size: 12px;
+      }
+
+      img {
+        margin-right: 10px;
+        width: 24px;
+        flex-shrink: 0;
+        @media (max-width: $pc) {
+          width: 16px;
+          margin-right: 4px;
+        }
+
+      }
+    }
+
+    h4 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: math.div(38, 32);
+      @media (max-width: $pc) {
+        font-size: 24px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 20px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__price {
+    padding: 0 24px;
+    @media (max-width: $pc) {
+      padding: 0 12px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.6);
+      @media (max-width: $pc) {
+        font-size: 12px;
+      }
+
+    }
+
+    h4 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: math.div(38, 32);
+      @media (max-width: $pc) {
+        font-size: 24px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 20px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__right {
+    max-width: 308px;
+    width: 100%;
+    @media (max-width: $pc) {
+      max-width: 280px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+
+  }
+}
+
