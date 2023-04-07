@@ -41,3 +41,47 @@
     }
   }
 }
+
+.item {
+  background: rgba(43, 15, 84, 0.3);
+  padding: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: #CAFD35;
+  }
+
+  &__icon {
+    height: 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    img {
+      max-height: 100%
+    }
+  }
+
+  &__content {
+    h4 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: math.div(22, 20);
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      line-height: math.div(22, 16);
+    }
+  }
+}

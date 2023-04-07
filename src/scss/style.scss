@@ -118,6 +118,14 @@ body {
   &__wrap-bg {
     flex: 1 1 auto;
     background: linear-gradient(17.37deg, #200A43 10.51%, #481A77 41.18%, #1B0A3E 72.36%);
+
+    &.two {
+      background: none;
+    }
+  }
+
+  &__bg-two {
+    background: linear-gradient(6.63deg, #200A43 11.34%, #481A77 55.47%, #1B0A3E 88.62%);
   }
 
   // Фікс для слайдерів

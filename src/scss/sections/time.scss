@@ -1,0 +1,205 @@
+.time {
+  padding: 73px 0 100px;
+  @media (max-width: $pc) {
+    padding: 65px 0 87px;
+  }
+  @media (max-width: $mobile) {
+    padding-bottom: 100px;
+  }
+
+  &__container {
+    max-width: 1180px;
+  }
+
+  &__grid-layout {
+    gap: 80px 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $pc) {
+      gap: 40px;
+    }
+    @media (max-width: $pc) {
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 35px;
+    }
+
+  }
+
+  &__item {
+  }
+}
+
+.item-time {
+  border-radius: 5px;
+  padding: 30px 20px 50px 25px;
+  position: relative;
+  @media (max-width: $pc) {
+    padding: 24px 20px 29px 24px;
+  }
+  @media (max-width: $mobile) {
+    padding: 23px 15px 30px;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    content: '';
+    background: #CAFD35;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @media (max-width: $pc) {
+      height: 4px;
+    }
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    filter: blur(45px);
+    background: linear-gradient(111.89deg, rgba(77, 45, 129, 0.69) 30.06%, rgba(35, 26, 89, 0.65) 100%);
+  }
+
+  &:nth-child(1) {
+    background: linear-gradient(111.89deg, rgba(77, 45, 129, 0.69) 30.06%, rgba(35, 26, 89, 0.65) 100%);
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(126.23deg, rgba(60, 21, 201, 0.78) 35.28%, rgba(211, 23, 151, 0.25) 98.14%);
+
+    &::after {
+      background: linear-gradient(126.23deg, rgba(60, 21, 201, 0.78) 35.28%, rgba(211, 23, 151, 0.25) 98.14%);
+
+    }
+
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(126.23deg, rgba(148, 34, 89, 0.78) 35.28%, rgba(99, 19, 202, 0.25) 98.14%);
+
+    &::after {
+
+      background: linear-gradient(126.23deg, rgba(148, 34, 89, 0.78) 35.28%, rgba(99, 19, 202, 0.25) 98.14%);
+    }
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(125.65deg, rgba(6, 97, 189, 0.78) 33.88%, rgba(0, 148, 59, 0.7) 93.29%);
+
+    &::after {
+      background: linear-gradient(125.65deg, rgba(6, 97, 189, 0.78) 33.88%, rgba(0, 148, 59, 0.7) 93.29%);
+    }
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: math.div(33, 24);
+      @media (max-width: $pc) {
+        gap: 14px;
+        font-size: 20px;
+      }
+      @media (max-width: $mobile) {
+        gap: 20px;
+        font-size: 16px;
+        &:last-child {
+          font-size: 20px;
+        }
+      }
+
+      span {
+        font-weight: 400;
+        @media (max-width: $pc) {
+          font-weight: 500;
+        }
+
+
+        a {
+          display: block;
+          transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+          @media (max-width: $pc) {
+            font-weight: 700;
+          }
+          @media (max-width: $mobile) {
+            font-size: 24px;
+          }
+          @media (hover: hover) {
+            &:hover {
+              color: $rose;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 48px;
+        flex-shrink: 0;
+        @media (max-width: $pc) {
+          width: 40px;
+        }
+
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+        @media (max-width: $pc) {
+          margin-bottom: 30px;
+        }
+
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    @media (max-width: $pc) {
+      gap: 14px;
+      font-size: 30px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 24px;
+    }
+    @media (max-width: $mobile) {
+      gap: 20px;
+    }
+
+    img {
+      width: 48px;
+      flex-shrink: 0;
+      @media (max-width: $pc) {
+        width: 40px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+      @media (max-width: $pc) {
+        margin-bottom: 40px;
+      }
+
+    }
+  }
+}

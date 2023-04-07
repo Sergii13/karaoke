@@ -1,0 +1,120 @@
+.faq {
+  padding: 86px 0 90px;
+  @media (max-width: $pc) {
+    padding: 70px 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 30px 0 70px;
+  }
+
+  &__container {
+  }
+
+  &__title {
+    font-size: 50px;
+    line-height: math.div(60, 50);
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 15px;
+    @media (max-width: $pc) {
+      text-align: center;
+    }
+    @media (max-width: $mobile) {
+      font-size: 30px;
+    }
+
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: math.div(29, 20);
+    margin-bottom: 50px;
+    @media (max-width: $tablet) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @media (max-width: em(1100)) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__column {
+  }
+}
+
+.spollers {
+  &__item {
+    padding: 25px 20px 25px 27px;
+    background: #1C0B3F;
+    border-radius: 5px;
+    @media (max-width: $mobile) {
+      padding: 25px 15px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: math.div(22, 16);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+    @media (max-width: $pc) {
+      gap: 10px;
+    }
+
+    &._spoller-active {
+      &::before {
+        content: '-';
+        color: #fff;
+        background: $rose;
+      }
+    }
+
+    &::before {
+      content: '+';
+      background: #CAFD35;
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      background: $green;
+      font-weight: 500;
+      font-size: 13px;
+      color: #6129D1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+    }
+  }
+
+  &__body {
+  }
+
+  &__text {
+    padding: 27px 0 6px;
+    font-size: 14px;
+    line-height: math.div(20, 14);
+    @media (max-width: em(1100)) {
+      padding-top: 13px;
+
+    }
+  }
+}
