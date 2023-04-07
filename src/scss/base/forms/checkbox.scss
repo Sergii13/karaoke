@@ -1,38 +1,80 @@
 .checkbox {
-	position: relative;
-	&:not(:last-child) {
-		margin-bottom: em(5);
-	}
-	// .checkbox__input
-	&__input {
-		position: absolute;
-		width: 0;
-		height: 0;
-		opacity: 0;
-		&:focus-visible + .checkbox__label:before {
-			box-shadow: 0 0 5px #000;
-		}
-		&:checked + .checkbox__label:before {
-			background: #000;
-		}
-	}
-	// .checkbox__label
-	&__label {
-		cursor: pointer;
-		display: inline-flex;
-		position: relative;
-		gap: 10px;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
-		}
-	}
-	// .checkbox__text
-	&__text {
-		align-self: center;
-	}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // .options__item
+  &__item {
+    position: relative;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  // .options__input
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+
+
+    &:checked + .checkbox__label:before {
+      background: url('@img/icons/check2.svg') center /15px 15px no-repeat, $green;
+      border: 1px solid $green;
+      @media (max-width: $mobile) {
+        background: url('@img/icons/check2.svg') center /13px 13px no-repeat, $green;
+      }
+    }
+
+  }
+
+  // .options__label
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+
+    &:before {
+      content: "";
+      align-self: flex-start;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      @media (max-width: $mobile) {
+        width: 21px;
+        border-radius: 7px;
+        height: 21px;
+        flex: 0 0 21px;
+      }
+    }
+
+  }
+
+  // .options__text
+  &__text {
+    font-size: 20px;
+    line-height: math.div(20, 20);
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+
+    a {
+      color: $green;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (hover: hover) {
+        &:hover {
+          color: $rose;
+        }
+      }
+    }
+  }
 }

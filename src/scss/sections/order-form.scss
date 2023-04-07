@@ -1,0 +1,334 @@
+.booking {
+  &__form {
+  }
+}
+
+.form-order {
+  &__row {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $pc) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .checkbox {
+    margin-bottom: 8px;
+  }
+
+  &__column {
+    background: #15082F;
+    border-radius: 24px;
+    padding: 24px;
+    @media (max-width: $pc) {
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+  }
+
+  &__block {
+    padding: 30px 0;
+    @media (max-width: $mobile) {
+      padding: 24px 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 36px;
+    margin-top: 24px;
+    @media (max-width: $mobile) {
+      margin-top: 16px;
+      gap: 20px;
+    }
+    @media (max-width: em(650)) {
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+  }
+
+  &__item {
+  }
+
+  &__label {
+    color: rgba(255, 255, 255, 0.65);
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+
+    span {
+      display: inline-block;
+      margin-bottom: 16px;
+      @media (max-width: $mobile) {
+        margin-bottom: 12px;
+      }
+    }
+
+
+  }
+
+  &__input {
+  }
+
+  &__payments {
+    display: flex;
+    align-items: center;
+  }
+
+  &__imgs {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    @media (max-width: $mobile) {
+      padding-left: 10px;
+      gap: 8px;
+    }
+  }
+
+  &__coupon {
+    max-width: 194px;
+    margin-top: 16px;
+    @media (max-width: $mobile) {
+      max-width: 137px;
+      margin-top: 12px;
+    }
+  }
+
+  .options {
+    margin-top: 16px;
+  }
+
+  &__table {
+    padding-top: 8px;
+    font-size: 20px;
+    line-height: math.div(20, 20);
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+
+    & > * {
+      padding: 16px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+      @media (max-width: $mobile) {
+        padding: 12px 0;
+      }
+    }
+
+    h4 {
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom-text {
+    font-size: 20px;
+    line-height: math.div(20, 20);
+    padding: 24px 0;
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+      line-height: math.div(20, 16);
+      padding-top: 16px;
+    }
+
+    a {
+      color: $green;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (hover: hover) {
+        &:hover {
+          color: $rose;
+        }
+      }
+    }
+  }
+
+  &__button {
+    color: #1C0B3F;
+    height: 93px;
+    font-size: 32px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: $pc) {
+      height: 70px;
+      font-size: 24px;
+    }
+    @media (max-width: $mobile) {
+      height: 60px;
+      font-size: 20px;
+    }
+
+  }
+}
+
+.form-info {
+  display: flex;
+  align-items: center;
+  line-height: math.div(24, 16);
+  color: rgba(255, 255, 255, 0.8);
+  gap: 9px;
+  font-weight: 500;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+
+}
+
+
+.order-price {
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  @media (max-width: $pc) {
+    padding: 24px 0 32px;
+  }
+
+  margin-bottom: 24px;
+
+  &__title {
+    text-align: center;
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      @media (max-width: $mobile) {
+        left: -15px;
+        width: calc(100% + 30px);
+      }
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+      font-weight: 500;
+      line-height: math.div(24, 16);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 0 21px;
+      background: #15082F;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    @media (max-width: $pc) {
+      font-size: 16px;
+    }
+
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__left {
+  }
+
+  &__value {
+    font-size: 32px;
+    line-height: math.div(38, 32);
+    font-weight: 800;
+    @media (max-width: $pc) {
+      font-size: 24px;
+    }
+
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__button {
+    height: 60px;
+    max-width: 220px;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+    line-height: 17px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $pc) {
+      max-width: 180px;
+      font-size: 16px;
+      height: 50px;
+    }
+    @media (max-width: $mobile) {
+      height: 33px;
+      max-width: 146px;
+      font-size: 13px;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background: $rose;
+      }
+    }
+  }
+}
+

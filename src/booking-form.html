@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Booking Order"
+})
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <div class="wrapper__wrap-bg">
+        <main class="page">
+            <section class="booking">
+                <div class="booking__container">
+                    <h1 class="booking__title">
+                        Room Booking
+                    </h1>
+                    <form action="#" class="booking__form form-order">
+                        <div class="form-order__row">
+                            <div class="form-order__column">
+                                <div class="form-order__block">
+                                    <div class="form-info">
+                                        <img src="@img/icons/info.svg" alt="">
+                                        Email address
+                                    </div>
+                                    <div class="form-order__items">
+                                        <div class="form-order__item">
+                                            <label class="form-order__label">
+                                                <span>Last name <b>*</b></span>
+                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                            </label>
+                                        </div>
+                                        <div class="form-order__item">
+                                            <label class="form-order__label">
+                                                <span>First name <b>*</b></span>
+                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                            </label>
+                                        </div>
+                                        <div class="form-order__item">
+                                            <label class="form-order__label">
+                                                <span>Phone  <b>*</b></span>
+                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                            </label>
+                                        </div>
+                                        <div class="form-order__item">
+                                            <label class="form-order__label">
+                                                <span>Email address<b>*</b></span>
+                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-order__block">
+                                    <div class="form-order__payments">
+                                        <div class="form-info">
+                                            <img src="@img/icons/info.svg" alt="">
+                                            Billing information
+                                        </div>
+                                        <div class="form-order__imgs">
+                                            <img src="@img/order/01.png" alt="">
+                                            <img src="@img/order/02.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-order__block">
+                                    <div class="form-info">
+                                        <img src="@img/icons/info.svg" alt="">
+                                        Pay
+                                    </div>
+                                    <div class="options">
+                                        <div class="options__item">
+                                            <input hidden id="o_1" class="options__input" checked type="radio" value="1"
+                                                   name="option">
+                                            <label for="o_1" class="options__label"><span class="options__text">Pay deposit 20%</span></label>
+                                        </div>
+                                        <div class="options__item">
+                                            <input hidden id="o_2" class="options__input" type="radio" value="2"
+                                                   name="option">
+                                            <label for="o_2" class="options__label"><span class="options__text">Pay in full 100%</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-order__block">
+                                    <div class="form-info">
+                                        <img src="@img/icons/info.svg" alt="">
+                                        Promotions
+                                    </div>
+                                    <div class="form-order__coupon">
+                                        <div class="form-order__item">
+                                            <label class="form-order__label">
+                                                <span>Coupun code</span>
+                                                <input type="text" placeholder="f485nd" class="form-order__input input">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-order__column">
+                                <div class="form-info">
+                                    <img src="@img/icons/info.svg" alt="">
+                                    Booking information
+                                </div>
+                                <div class="form-order__table">
+                                    <h4>
+                                        Comics Room
+                                    </h4>
+                                    <div class="form-order__table-row">
+                                        <span>From:</span>
+                                        <span>2023-03-26 20:00</span>
+                                    </div>
+                                    <div class="form-order__table-row">
+                                        <span>To:</span>
+                                        <span>2023-03-26 20:00</span>
+                                    </div>
+                                    <div class="form-order__table-row">
+                                        <span>Duration:</span>
+                                        <span>2 hours</span>
+                                    </div>
+                                    <div class="form-order__table-row">
+                                        <span>People:</span>
+                                        <span>5</span>
+                                    </div>
+                                    <div class="form-order__table-row">
+                                        <span>Packages:</span>
+                                        <span>Singer</span>
+                                    </div>
+                                </div>
+                                <div class="order-price">
+                                    <div class="order-price__title">
+                                        <span>
+                                            Total price
+                                        </span>
+                                    </div>
+                                    <div class="order-price__row">
+                                        <div class="order-price__left">
+                                            <div class="order-price__value">
+                                                65,24 €
+                                            </div>
+                                            <div class="order-price__label">
+                                                Per x2 hours
+                                            </div>
+                                        </div>
+                                        <a href="" class="order-price__button">
+                                            Change
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-info">
+                                    <img src="@img/icons/info.svg" alt="">
+                                    Personal data agreement
+                                </div>
+                                <div class="form-order__bottom-text">
+                                    Your personal data will be used to process your order, support your experience
+                                    throughout this website, and for other purposes described in our <a href="">
+                                    privacy policy.
+                                </a>
+                                </div>
+                                <div class="checkbox">
+                                    <input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                           value="11" name="form[]">
+                                    <label for="c_11" class="checkbox__label"><span
+                                            class="checkbox__text">I agree to the processing of <a href="">terms and conditions*</a></span></label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="button _fw form-order__button">
+                            place order
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>
