@@ -1,0 +1,160 @@
+.contact {
+  padding-top: 86px;
+  @media (max-width: $mobile) {
+    padding-top: 45px;
+  }
+
+  &__top {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @media (max-width: $pc) {
+        margin-bottom: 60px;
+      }
+
+    }
+  }
+
+  &__container {
+    max-width: 1376px;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: math.div(81, 72);
+    font-weight: 800;
+    @media (max-width: $pc) {
+      font-size: 46px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 36px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+      @media (max-width: $mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: math.div(29, 20);
+    @media (max-width: $pc) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $pc) {
+        margin-bottom: 50px;
+      }
+
+    }
+  }
+
+  &__row {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(600)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @media (max-width: $pc) {
+        margin-bottom: 60px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 50px;
+      }
+
+    }
+  }
+
+  &__map-ibg {
+    height: 505px;
+  }
+}
+
+.contact-item {
+  background: rgba(43, 15, 84, 0.3);
+  padding: 36px 15px 24px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #CAFD35;
+  }
+
+  &__icon {
+    height: 50px;
+
+    img {
+      max-height: 100%
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 63px;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h4 {
+      font-size: 25px;
+      line-height: math.div(33, 25);
+      font-weight: 800;
+      @media (max-width: $pc) {
+        font-size: 20px;
+      }
+
+      a {
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        @media (hover: hover) {
+          &:hover {
+            color: $rose;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      @media (max-width: $pc) {
+        font-size: 16px;
+      }
+
+      &.small {
+        font-size: 12px;
+        line-height: 10px;
+        text-transform: inherit;
+        letter-spacing: 0;
+        margin-top: 14px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 9px;
+      }
+    }
+  }
+}
+

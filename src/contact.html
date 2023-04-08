@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Contacts"
+})
+<body>
+<div class="wrapper wrapper_contacts">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <section class="contact">
+            <div class="contact__top">
+                <div class="contact__container">
+                    <h1 class="contact__title">
+                        Contact us
+                    </h1>
+                    <div class="contact__text">
+                        <p>If you'd like to get in contact with us for any reason, do not hesitate</p>
+                    </div>
+                    <div class="contact__row">
+                        <div class="contact-item">
+                            <div class="contact-item__icon">
+                                <img src="@img/icons/location.svg" alt="">
+                            </div>
+                            <div class="contact-item__content">
+                                <p>
+                                    Our address
+                                </p>
+                                <h4>DOB UTCA 16 GOZSDU UDVAR, BUDAPEST, HUNGARY 1072</h4>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__icon">
+                                <img src="@img/icons/phone.svg" alt="">
+                            </div>
+                            <div class="contact-item__content">
+                                <p>
+                                    Our phone
+                                </p>
+                                <h4><a href="tel:+36301708777">+36 30 170 8777</a></h4>
+                                <p class="small">
+                                    Every day from phone 13:00 to 03:00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__icon">
+                                <img src="@img/icons/mail.svg" alt="">
+                            </div>
+                            <div class="contact-item__content">
+                                <p>
+                                    Our e-mail
+                                </p>
+                                <h4><a href="mailto:BOOKING@BBROOMS.HU">BOOKING@BBROOMS.HU</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#" class="about-form form">
+                        <div class="about-form__title">
+                            ANY QUESTIONS?
+                        </div>
+                        <div class="form__row2">
+                            <div class="form__item">
+                                <label class="form__input-wrap">
+                                        <span class="form__label">
+                                        Name</span> <input type="text" class="input form__input" placeholder="Alex">
+                                </label>
+
+                            </div>
+                            <div class="form__item">
+                                <label class="form__input-wrap">
+                                        <span class="form__label">
+                                      Phone</span> <input type="text" class="input form__input"
+                                                          placeholder="+36 70 765 89 78">
+                                </label>
+
+                            </div>
+                            <div class="form__item w-100">
+                                <label class="form__input-wrap">
+                                        <span class="form__label">
+                                    Message</span> <textarea class="input about-form__textarea textarea"
+                                                             placeholder="Type here"></textarea>
+                                </label>
+
+                            </div>
+                        </div>
+                        <button class="form__button button">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact__map-ibg">
+                <img src="@img/contact/map.jpg" alt="">
+            </div>
+        </section>
+    </main>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

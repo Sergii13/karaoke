@@ -1,0 +1,185 @@
+.gift {
+  padding: 100px 0 90px;
+  @media (max-width: $pc) {
+    padding: 114px 0 42px;
+  }
+  @media (max-width: $mobile) {
+    padding: 60px 0 50px;
+  }
+
+  &__container {
+  }
+
+  &__row {
+    display: flex;
+    gap: 37px;
+    align-items: flex-start;
+    @media (max-width: $pc) {
+      gap: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 155px;
+      @media (max-width: $pc) {
+        margin-bottom: 60px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 50px;
+      }
+
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: math.div(60, 50);
+    text-transform: uppercase;
+    @media (max-width: $pc) {
+      font-size: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media (max-width: $pc) {
+        margin-bottom: 27px;
+      }
+
+    }
+  }
+
+  &__text {
+    line-height: math.div(29, 16);
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @media (max-width: $pc) {
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+
+  &__button {
+    padding: 0 22px;
+    @media (max-width: $mobile) {
+      margin: 0 auto;
+      display: flex;
+      max-width: 235px;
+      width: 100%;
+      font-size: 16px;
+      padding: 0 12px;
+    }
+  }
+
+  &__mob-ibg {
+    padding-bottom: percent(240, 337);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__image-ibg {
+    width: percent(710, 1590);
+    height: 430px;
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__center {
+    max-width: 1146px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 90px;
+      @media (max-width: $pc) {
+        margin-bottom: 60px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 50px;
+      }
+
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 46px;
+      line-height: math.div(58, 46);
+      font-weight: 800;
+      @media (max-width: $pc) {
+        font-size: 30px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 90px;
+        @media (max-width: $pc) {
+          margin-bottom: 40px;
+        }
+
+      }
+    }
+  }
+
+  &__text-bottom {
+    max-width: 813px;
+    line-height: math.div(29, 16);
+  }
+
+  &__grid-layout {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    @media (max-width: $pc) {
+      gap: 20px;
+    }
+
+  }
+
+  &__bottom {
+  }
+
+  &__bottom-title {
+    font-size: 46px;
+    line-height: math.div(58, 46);
+    font-weight: 800;
+    @media (max-width: $pc) {
+      font-size: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media (max-width: $pc) {
+        margin-bottom: 14px;
+      }
+
+    }
+  }
+}
+
+
+.gift-form {
+  margin-top: 60px;
+  @media (max-width: $pc) {
+    margin-top: 33px;
+  }
+
+
+  &__input {
+  }
+
+  &__textarea {
+    height: 150px;
+  }
+}
+
+

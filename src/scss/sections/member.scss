@@ -1,0 +1,130 @@
+.member {
+  padding: 87px 0;
+  @media (max-width: $pc) {
+    padding: 114px 0 66px;
+  }
+  @media (max-width: $mobile) {
+    padding: 60px 0 130px;
+  }
+
+  &__container {
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+    @media (max-width: $pc) {
+      flex-direction: column;
+    }
+    @media (max-width: $mobile) {
+      gap: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 87px;
+      @media (max-width: $pc) {
+        margin-bottom: 130px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 91px;
+      }
+
+    }
+  }
+
+  &__content {
+    width: percent(761, 1650);
+    flex-shrink: 0;
+    @media (max-width: $pc) {
+      width: 100%;
+
+    }
+
+  }
+
+  &__title {
+    font-size: 50px;
+    line-height: math.div(60, 50);
+    text-transform: uppercase;
+    font-weight: 800;
+    @media (max-width: $pc) {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media (max-width: $pc) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 27px;
+      }
+
+    }
+  }
+
+  &__text {
+    line-height: math.div(29, 16);
+    max-width: 670px;
+    @media (max-width: $pc) {
+      max-width: 100%;
+    }
+
+  }
+
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  &__bottom {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+      @media (max-width: $pc) {
+        margin-bottom: 26px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+
+  &__title2 {
+    font-size: 46px;
+    line-height: math.div(58, 46);
+    font-weight: 800;
+    @media (max-width: $pc) {
+      font-size: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media (max-width: $pc) {
+        margin-bottom: 14px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 48px;
+      }
+
+    }
+  }
+
+  &__text2 {
+    line-height: math.div(29, 16);
+  }
+}
+
+
+.member-form {
+  max-width: 1257px;
+}
+
+

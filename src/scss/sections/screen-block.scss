@@ -75,6 +75,11 @@
     @media (max-width: $pc) {
       margin-top: 30px;
     }
+    @media (max-width: $tablet) {
+      &.mt-230 {
+        margin-top: 160px;
+      }
+    }
     @media (max-width: $mobile) {
       margin-top: 126px;
     }
