@@ -24,6 +24,7 @@ const customMonth = [
 ];
 if (allDate.length > 0) {
   allDate.forEach((item) => {
+    item.readOnly = true;
     let value = null;
     const picker = datepicker(item, {
       customMonths: customMonth,
