@@ -46,6 +46,11 @@
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 8px;
+
+      ._form-error & {
+        border: 1px solid #bd2130;
+      }
+
       @media (max-width: $mobile) {
         width: 21px;
         border-radius: 7px;

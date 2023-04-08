@@ -25,6 +25,9 @@
   border: none;
   box-shadow: 0 0 0 1px #eaeaea inset, 0 2px 8px 0 rgba(135, 162, 164, .48) !important;
   padding: 13px;
+  @media (max-width: $mobileSmall) {
+    width: 300px;
+  }
 
   &:before,
   &:before {

@@ -87,6 +87,7 @@
     flex-wrap: wrap;
     margin-top: 20px;
     align-items: flex-start;
+    gap: 30px 10px;
   }
 
   &:not(:last-child) {
@@ -98,12 +99,11 @@
     align-items: center;
     gap: 12px 25px;
     @media (max-width: $tablet) {
-      &:nth-child(odd) {
-        width: calc(37% - 10px);
+      width: 100%;
+      &:not(:last-child) {
+        width: calc(33% - 16.6px);
       }
-      &:nth-child(even) {
-        width: calc(63% - 10px);
-      }
+
     }
     @media (max-width: $mobile) {
       flex-direction: column;
@@ -133,6 +133,9 @@
     align-items: center;
     cursor: pointer;
     gap: 20px;
+    @media (max-width: $mobile) {
+      gap: 10px;
+    }
 
     &:before {
       content: "";

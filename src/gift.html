@@ -135,7 +135,7 @@
                                                name="option">
                                         <label for="o_121" class="gift-options__label"><span
                                                 class="gift-options__text">Custom amount</span></label>
-                                        <input type="text" placeholder="Your amount"
+                                        <input type="number" placeholder="Your amount"
                                                class="gift-form__input input form__input">
                                     </div>
                                 </div>
@@ -143,7 +143,8 @@
                                     <div class="form__item">
                                         <label class="form__input-wrap">
                                         <span class="form__label">
-                                       From</span> <input type="text" class="input form__input" placeholder="Name">
+                                       From</span> <input data-required type="text" class="input form__input"
+                                                          placeholder="Name">
                                         </label>
 
                                     </div>
@@ -151,7 +152,7 @@
                                         <label class="form__input-wrap">
                                         <span class="form__label">
                              Buyer`s email address</span>
-                                            <input type="text" class="input form__input"
+                                            <input data-required="email" type="text" class="input form__input"
                                                    placeholder="Email">
                                         </label>
 
@@ -159,7 +160,7 @@
                                     <div class="form__item">
                                         <label class="form__input-wrap">
                                             <span class="form__label">For</span>
-                                            <input type="text" class="input form__input"
+                                            <input data-required type="text" class="input form__input"
                                                    placeholder="For">
                                         </label>
 
@@ -168,7 +169,7 @@
                                         <label class="form__input-wrap">
                                         <span class="form__label">
                                     Message</span>
-                                            <textarea class="input gift-form__textarea textarea"
+                                            <textarea data-required class="input gift-form__textarea textarea"
                                                       placeholder="Type here"></textarea>
                                         </label>
 

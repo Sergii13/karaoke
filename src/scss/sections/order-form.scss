@@ -99,6 +99,11 @@
     display: flex;
     align-items: center;
     gap: 6px;
+
+    img {
+      max-width: 50px
+    }
+
     @media (max-width: $mobile) {
       padding-left: 10px;
       gap: 8px;
@@ -106,10 +111,36 @@
   }
 
   &__coupon {
-    max-width: 194px;
+
     margin-top: 16px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
     @media (max-width: $mobile) {
-      max-width: 137px;
+      gap: 10px;
+    }
+
+    .form-order__item {
+      max-width: 194px;
+      @media (max-width: $mobile) {
+        max-width: 137px;
+      }
+    }
+
+    .button {
+      border-radius: 16px;
+      height: 70px;
+      @media (max-width: $pc) {
+        height: 50px;
+      }
+      @media (max-width: $mobile) {
+        padding: 0 20px;
+        font-size: 16px;
+      }
+
+    }
+
+    @media (max-width: $mobile) {
       margin-top: 12px;
     }
   }

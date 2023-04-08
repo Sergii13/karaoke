@@ -9,8 +9,12 @@
     <div class="wrapper__wrap-bg two">
         <main class="page">
             <section class="screen-block">
+                <div class="screen-block__woman">
+                    <img src="@img/screen-block/woman.png" alt="">
+                </div>
                 <div class="screen-block__image-ibg">
-                    <img src="@img/screen-block/04.jpg" alt="">
+                    <img class="pc" src="@img/screen-block/04.jpg" alt="">
+                    <img class="mob" src="@img/screen-block/044.jpg" alt="">
                 </div>
                 <div class="screen-block__container">
                     <h1 class="screen-block__title">
@@ -82,21 +86,23 @@
                                 <div class="form__item">
                                     <label class="form__input-wrap">
                                         <span class="form__label">
-                                      First Name</span> <input type="text" class="input form__input" placeholder="Alex">
+                                      First Name</span> <input data-required type="text" class="input form__input"
+                                                               placeholder="Alex">
                                     </label>
 
                                 </div>
                                 <div class="form__item">
                                     <label class="form__input-wrap">
                                         <span class="form__label">
-                                     Last Name</span> <input type="text" class="input form__input" placeholder="Smith">
+                                     Last Name</span> <input data-required type="text" class="input form__input"
+                                                             placeholder="Smith">
                                     </label>
 
                                 </div>
                                 <div class="form__item">
                                     <label class="form__input-wrap">
                                         <span class="form__label">
-                                      Phone</span> <input type="text" class="input form__input"
+                                      Phone</span> <input data-required type="text" class="input form__input"
                                                           placeholder="+36 70 765 89 78">
                                     </label>
 
@@ -104,7 +110,7 @@
                                 <div class="form__item">
                                     <label class="form__input-wrap">
                                         <span class="form__label">
-                                 Email</span> <input type="text" class="input form__input"
+                                 Email</span> <input data-required="email" type="text" class="input form__input"
                                                      placeholder="alex567@gmail.com">
                                     </label>
 
@@ -112,7 +118,8 @@
                                 <div class="form__item">
                                     <label class="form__input-wrap">
                                         <span class="form__label">
-                                     Birthday</span> <input type="text" class="input form__input"
+                                     Birthday</span> <input date-mask data-required type="text"
+                                                            class="input form__input"
                                                             placeholder="18.10.1999">
                                     </label>
 

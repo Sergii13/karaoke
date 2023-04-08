@@ -67,7 +67,7 @@
   }
 
   &__scroll {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     z-index: 3;
@@ -84,6 +84,12 @@
     letter-spacing: -0.3px;
     bottom: 75px;
     right: 65px;
+
+    ._header-scroll & {
+      opacity: 0;
+      visibility: hidden;
+    }
+
     @media (hover: hover) {
       &:hover {
         color: $rose;

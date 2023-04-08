@@ -25,25 +25,29 @@
                                         <div class="form-order__item">
                                             <label class="form-order__label">
                                                 <span>Last name <b>*</b></span>
-                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                                <input data-required type="text" placeholder="Alex"
+                                                       class="form-order__input input">
                                             </label>
                                         </div>
                                         <div class="form-order__item">
                                             <label class="form-order__label">
                                                 <span>First name <b>*</b></span>
-                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                                <input data-required type="text" placeholder="Alex"
+                                                       class="form-order__input input">
                                             </label>
                                         </div>
                                         <div class="form-order__item">
                                             <label class="form-order__label">
                                                 <span>Phone  <b>*</b></span>
-                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                                <input data-required type="text" placeholder="Alex"
+                                                       class="form-order__input input">
                                             </label>
                                         </div>
                                         <div class="form-order__item">
                                             <label class="form-order__label">
                                                 <span>Email address<b>*</b></span>
-                                                <input type="text" placeholder="Alex" class="form-order__input input">
+                                                <input data-required type="text" placeholder="Alex"
+                                                       class="form-order__input input">
                                             </label>
                                         </div>
                                     </div>
@@ -90,6 +94,9 @@
                                                 <input type="text" placeholder="f485nd" class="form-order__input input">
                                             </label>
                                         </div>
+                                        <button class="button form-order__btn-coupon">
+                                            Apply
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -134,9 +141,7 @@
                                             <div class="order-price__value">
                                                 65,24 €
                                             </div>
-                                            <div class="order-price__label">
-                                                Per x2 hours
-                                            </div>
+                                          
                                         </div>
                                         <a href="" class="order-price__button">
                                             Change
@@ -154,7 +159,8 @@
                                 </a>
                                 </div>
                                 <div class="checkbox">
-                                    <input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                    <input data-required id="c_11" data-error="Ошибка" class="checkbox__input"
+                                           type="checkbox"
                                            value="11" name="form[]">
                                     <label for="c_11" class="checkbox__label"><span
                                             class="checkbox__text">I agree to the processing of <a href="">terms and conditions*</a></span></label>

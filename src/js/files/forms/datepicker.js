@@ -33,7 +33,9 @@ if (allDate.length > 0) {
           date.getDay() === 2 || date.getDay() === 1 || date.getDay() === 3
         );
       },
+      position: "tl",
       autoClose: true,
+      readonly: true,
       minDate: new Date(),
       dateSelected: null,
       formatter: (input, date, instance) => {

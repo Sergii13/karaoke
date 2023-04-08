@@ -1,6 +1,18 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 // Підключення списку активних модулів
 import { flsModules } from "../modules.js";
+import IMask from "imask";
+
+if (document.querySelector("[date-mask]")) {
+  let dateMask = IMask(document.querySelector("[date-mask]"), {
+    mask: Date,
+    min: new Date(1960, 0, 1),
+    max: new Date(2023, 0, 1),
+    lazy: true,
+    autofix: true,
+  });
+}
+
 // Допоміжні функції
 import {
   isMobile,
@@ -319,8 +331,8 @@ export function formQuantity() {
           if (+valueElement.dataset.quantityMin > value) {
             value = valueElement.dataset.quantityMin;
           }
-        } else if (value < 1) {
-          value = 1;
+        } else if (value < 2) {
+          value = 2;
         }
       }
       targetElement

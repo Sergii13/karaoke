@@ -9,6 +9,10 @@ textarea {
   appearance: none;
 }
 
+.form__error {
+  display: none;
+}
+
 .input {
   width: 100%;
   display: block;
@@ -25,6 +29,17 @@ textarea {
     height: 50px;
   }
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+
   &::placeholder {
     color: rgba(255, 255, 255, 0.35);
   }
@@ -35,6 +50,7 @@ textarea {
   }
 
   &._form-error {
+    border: 1px solid #bd2130;
   }
 }
 
