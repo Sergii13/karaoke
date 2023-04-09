@@ -40,3 +40,22 @@ if (customInput) {
     console.log("");
   });
 }
+let input = document.querySelector("[data-custom]");
+
+// Додаємо подію "keydown" до інпут-елемента
+if (input) {
+  input.addEventListener("keydown", function (event) {
+    // Перевіряємо, чи код натиснутої клавіші є кодом цифри
+    if (
+      (event.keyCode < 48 || event.keyCode > 57) && // 0-9 (основні цифри)
+      (event.keyCode < 96 || event.keyCode > 105) && // 0-9 (цифрова клавіатура)
+      event.keyCode !== 8 && // Backspace
+      event.keyCode !== 9 && // Tab
+      event.keyCode !== 37 && // Left arrow
+      event.keyCode !== 39 && // Right arrow
+      event.keyCode !== 46 // Delete
+    ) {
+      event.preventDefault(); // Блокуємо введення некоректних символів
+    }
+  });
+}
