@@ -33,3 +33,10 @@ if (btnDown) {
     });
   }
 }
+const customInput = document.querySelector("[data-custom]");
+if (customInput) {
+  customInput.addEventListener("focus", () => {
+    customInput.parentElement.querySelector("input[type=radio]").checked = true;
+    console.log("");
+  });
+}

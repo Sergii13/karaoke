@@ -123,9 +123,6 @@
 
     }
 
-    &:checked ~ .input {
-      pointer-events: all;
-    }
   }
 
   &__label {
@@ -151,7 +148,6 @@
 
   .gift-form__input {
     max-width: 170px;
-    pointer-events: none;
     padding: 0 20px;
 
   }
