@@ -158,10 +158,6 @@
         width: 66%;
         flex-shrink: 0;
 
-        .room-card__image-ibg::after {
-          background: linear-gradient(90deg, rgba(60, 26, 115, 0.0001) 0%, #1C0B3F 100%);
-          opacity: 0.9;
-        }
 
         .room-card__main {
           animation: content forwards 1s 1s ease-in-out;
@@ -184,8 +180,7 @@
     &::after {
       content: '';
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
-      background: linear-gradient(90deg, rgba(60, 26, 115, .0001) 0, #1c0b3f 50%, #1c0b3f 100%);
-      opacity: 0.5;
+      background: linear-gradient(90deg, rgba(60, 26, 115, 0.0001) 0%, #1C0B3F 100%);
       position: absolute;
       top: 0;
       left: 0;
