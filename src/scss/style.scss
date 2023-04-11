@@ -107,6 +107,14 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-top: 98px;
+  @media (max-width: em(1150)) {
+    padding-top: 94px;
+
+  }
+  @media (max-width: $mobile) {
+    padding-top: 64px;
+  }
   @supports (overflow: clip) {
     overflow: clip;
   }
